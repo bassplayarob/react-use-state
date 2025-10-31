@@ -2,12 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 
 import App from "./App";
-import Salutations from "./components/Salutations";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <div>
-    <App greeting="whats cracking" location="home" />
-    <Salutations />
+    <App greeting="salutations" location="another component" />
   </div>
 );
