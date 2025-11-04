@@ -1,32 +1,15 @@
 import React, { useState } from "react";
 
-export default function App(props) {
-  const [location, setLocation] = useState(props.location);
-  const [inputValue, setInputValue] = useState("");
+import Salutations from "./components/Salutations";
+import Navigation from "./components/Navigation";
+import Footer from "./components/Footer";
 
-  const { greeting } = props;
+export default function App(props) {
   return (
     <div>
-      <p>
-        {greeting} from {location}!
-      </p>
-      <br />
-      <form>
-        <input
-          type="text"
-          value={inputValue}
-          onChange={(e) => setInputValue(e.target.value)}
-        />
-        <button
-          type="submit"
-          onClick={(e) => {
-            e.preventDefault();
-            setLocation(inputValue);
-          }}
-        >
-          Submit
-        </button>
-      </form>
+      <Navigation />
+      <Salutations values={props} />
+      <Footer />
     </div>
   );
 }
